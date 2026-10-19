@@ -1,0 +1,51 @@
+SIMULADO POO — Cadastro de Funcionários
+
+Implemente o sistema abaixo a partir do diagrama UML.
+
+Funcionario
+------------------------------------------
+- nome : String
+- cargo : String
+- salario : double
+- totalFuncionarios : int             (sublinhado)
+------------------------------------------
++ Funcionario(String, String, double)
++ Funcionario(String, String)
++ getNome() : String
++ getCargo() : String
++ getSalario() : double
++ setSalario(double) : void
++ aumento(double) : void
++ exibe() : String
++ getTotalFuncionarios() : int        (sublinhado)
+
+App (instancia Funcionario)
+------------------------------------------
++ main(String[]) : void
+
+Regras da classe Funcionario:
+1. O atributo totalFuncionarios conta quantos funcionários foram
+   criados. Ele deve ser incrementado em AMBOS os construtores.
+2. O construtor que recebe nome, cargo e salário guarda os três valores.
+3. O construtor que recebe apenas nome e cargo define o salário
+   inicial como 1500.0.
+4. O método aumento recebe uma porcentagem e aumenta o salário.
+   Exemplo: aumento(10) em um salário de 2000.0 resulta em 2200.0.
+5. O método exibe devolve (não imprime) um texto com nome, cargo e salário.
+
+Na classe App, o método main deve:
+1. Criar um funcionário informando nome, cargo e salário
+   (Ana, Gerente, 9000.0).
+2. Criar um funcionário informando apenas nome e cargo
+   (Bruno, Analista).
+3. Exibir os dados dos dois funcionários.
+4. Aplicar um aumento de 10% ao segundo funcionário e exibir
+   seus dados novamente.
+5. Exibir o total de funcionários cadastrados.
+
+Saída esperada:
+Nome: Ana| Cargo: Gerente| Salário: 9000.0
+Nome: Bruno| Cargo: Analista| Salário: 1500.0
+Nome: Bruno| Cargo: Analista| Salário: 1650.0
+Total de funcionários: 2
+
